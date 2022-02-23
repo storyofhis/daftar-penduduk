@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AppController;
+use App\Models\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +20,7 @@ Route::get('/', function () {
 });
 
 
-Route::get('/tailwind', function () {
+Route::get('/daftar-penduduk', function () {
     return view('app');
 });
+Route::get('/daftar-penduduk', [AppController::class, 'input'])->name('proses-form-guest');
