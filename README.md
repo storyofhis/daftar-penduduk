@@ -7,7 +7,7 @@
 ```shellsession
 npm run watch
 ```
-## linked to storage image
+## linked to storage image 📷
 ```shellsession
 php artisan storage:link
 ```
