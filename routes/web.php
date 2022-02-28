@@ -26,3 +26,6 @@ Route::get('/', function () {
 
 Route::get('/daftar-penduduk', [AppController::class, 'input']);
 Route::post('/process-screening', [AppController::class, 'process']);
+
+// Auth::routes();
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

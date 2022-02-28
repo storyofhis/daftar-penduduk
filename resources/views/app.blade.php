@@ -27,7 +27,7 @@
                     </div>
                     @endif
 
-                    <form action="/process-screening" method="POST" class="bg-dark shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                    <form action="/process-screening" method="POST" class="bg-dark shadow-md rounded px-8 pt-6 pb-8 mb-4" enctype="multipart/form-data">
                         {{ csrf_field() }}
                     <div class="grid grid-cols-2 gap-4">
                         <div class="form-group mb-6">
@@ -129,7 +129,7 @@
                     
                     <div class="flex justify-center">
                         <div class="mb-3 w-96">
-                            <label for="foto-ktp" class="block text-gray-700 text-sm font-bold mb-2 dark:text-dark">
+                            <label for="ktp" class="block text-gray-700 text-sm font-bold mb-2 dark:text-dark">
                                FOTO KTP
                             </label>
                           <input class="form-control
@@ -146,7 +146,7 @@
                           transition
                           ease-in-out
                           m-0
-                          focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" type="file" id="formFile" name="foto-ktp" value="{{ old('foto-ktp') }}">
+                          focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" type="file" id="formFile" name="ktp" value="{{ old('ktp') }}">
                         </div>
                     </div>                    
                     <button type="submit" class="
