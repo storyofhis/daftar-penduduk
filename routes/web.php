@@ -20,7 +20,9 @@ Route::get('/', function () {
 });
 
 
-Route::get('/daftar-penduduk', function () {
-    return view('app');
-});
-Route::get('/daftar-penduduk', [AppController::class, 'input'])->name('proses-form-guest');
+// Route::get('/daftar-penduduk', function () {
+//     return view('app');
+// });
+
+Route::get('/daftar-penduduk', [AppController::class, 'input']);
+Route::post('/process-screening', [AppController::class, 'process']);

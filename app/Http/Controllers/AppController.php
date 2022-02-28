@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class AppController extends Controller
@@ -13,31 +13,22 @@ class AppController extends Controller
         return view('app');
     }
 
-    public function proses(Request $request, int $id)
+    public function process(Request $request)
     {
-        echo "</br>Path = " . $request->path();
+        $messagesError = [
+            'required' => ':attribute ini wajib diisi!!',
+            'min' => ':attribute harus diisi minimal :min karakter!!!',
+            'max' => ':attribute harus diisi maksimal :max karakter!!!',
+        ];
+        $this->validate($request,[
+            'nama' => ['required', 'min:6', 'max:20'],
+            'nik' => ['required', 'numeric', 'min:16'],
+            'alamat' => ['required', 'min:2'],
+            'tempat-lahir' => ['required', 'min:2'],
+            'tanggal-lahir' => ['required', 'min:2'],
+            'foto-ktp' => ['required', 'min:2'],
+       ]);
 
-        echo "</br>request patern == proses* ? " . ($request->is("proses*") ? 'true' : 'false');
-        echo "</br>request route name ==  proses-form-guest? " . ($request->routeIs("proses-form-guest") ? 'true' : 'false');
-
-        echo "</br>url = " . $request->url();
-        echo "</br>full url = " . $request->fullUrl();
-
-        echo "</br>Query string warna = " . $request->query('warna');
-
-        echo "</br>Method = " . $request->method();
-        echo "</br>Method == post? " . ($request->isMethod('post') ? 'true' : 'false');
-
-
-        echo "</br>Name = " . $request->input('name');
-        echo "</br>City = " . $request->input('city');
-
-        echo "</br>Hobby:";
-        for ($i = 0; $i < count($request->input('hobby')); $i++) {
-            echo '</br>' . $request->input("hobby.$i");
-        }
-        echo "</br></br> Gambar";
-        echo "</br>gambar ada? " . ($request->hasFile('gambar') ? 'true' : 'false');
-        echo "</br> Ekstensi = " . $request->gambar->extension();
+       return view('process-screening',['data' => $request]);
     }
 }
