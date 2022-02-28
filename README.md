@@ -3,9 +3,13 @@
 - [laravel](https://laravel.com/).
 - [Tailwindcss](https://tailwindcss.com/docs/guides/laravel).
 
-# Start your build process 🚀
+## Start your build process 🚀
 ```shellsession
 npm run watch
+```
+## linked to storage image
+```shellsession
+php artisan storage:link
 ```
 
 
