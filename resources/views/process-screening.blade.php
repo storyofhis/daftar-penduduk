@@ -18,7 +18,7 @@
                     <form method="POST" enctype="multipart/form-data" class="bg-dark shadow-md rounded px-8 pt-6 pb-8 mb-4">
                     <div class="grid grid-cols-2 gap-4">
                         <div class="form-group mb-6">
-                            <label class="block text-gray-700 text-sm font-bold mb-2 dark:text-dark" for="username">
+                            <label class="block text-gray-700 text-sm font-bold mb-2 dark:text-dark" for="nama">
                                 NAMA LENGKAP
                             </label>
                         </div>
@@ -40,7 +40,7 @@
                             {{ $data->nama }}
                         </div>
                         <div class="form-group mb-6">
-                            <label class="block text-gray-700 text-sm font-bold mb-2 dark:text-dark" for="username">
+                            <label class="block text-gray-700 text-sm font-bold mb-2 dark:text-dark" for="nik">
                                 NIK
                             </label>
                         </div>
@@ -63,7 +63,7 @@
                         </div>
                     
                         <div class="form-group mb-6">
-                            <label class="block text-gray-700 text-sm font-bold mb-2 dark:text-dark" for="username">
+                            <label class="block text-gray-700 text-sm font-bold mb-2 dark:text-dark" for="alamat">
                                 ALAMAT
                             </label>
                         </div>
@@ -84,7 +84,7 @@
                             {{ $data->alamat }}
                         </div>
                         <div class="form-group mb-6">
-                            <label class="block text-gray-700 text-sm font-bold mb-2 dark:text-dark" for="username">
+                            <label class="block text-gray-700 text-sm font-bold mb-2 dark:text-dark">
                                 TEMPAT LAHIR
                             </label>
                         </div>
@@ -101,12 +101,12 @@
                             transition
                             ease-in-out
                             m-0
-                            focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput126"
+                            focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                             placeholder="Tempat Lahir">
                             {{ $data['tempat-lahir'] }}
                         </div>
                         <div class="form-group mb-6">
-                            <div class="block text-gray-700 text-sm font-bold mb-2 dark:text-dark" for="username">
+                            <div class="block text-gray-700 text-sm font-bold mb-2 dark:text-dark" for="tanggal-lahir">
                                 TANGGAL LAHIR
                             </div>
                             <div date-rangepicker class="flex items-center">
@@ -120,15 +120,26 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="flex justify-center">
-                            <div class="mb-3 w-96">
-                                <div class="block text-gray-700 text-sm font-bold mb-2 dark:text-dark" for="username">
-                                    FOTO KTP
-                                </>
+                        <div class="form-group mb-6">
+                            <div class="block text-gray-700 text-sm font-bold mb-2 dark:text-dark" for="ktp">
+                                FOTO KTP
                             </div>
-                            <div class="object-fill h-48 w-96
-                                ">
-                                <img src="{{ $data->ktp }}" alt="foto-ktp" width="200px" />
+                            <div class="form-control block
+                                w-full
+                                px-3
+                                py-1.5
+                                text-base
+                                font-normal
+                                text-gray-700
+                                bg-white bg-clip-padding
+                                border border-solid border-gray-300
+                                rounded
+                                transition
+                                ease-in-out
+                                m-0
+                                focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                            >
+                                <img class="object-fill h-48 w-96" width="200px" src="{{ $data->ktp }}" alt="foto-ktp"  />
                             </div>
                             
                         </div>

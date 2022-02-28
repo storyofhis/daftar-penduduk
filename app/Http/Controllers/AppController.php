@@ -28,7 +28,7 @@ class AppController extends Controller
             'alamat' => ['required', 'min:2'],
             'tempat-lahir' => ['required', 'min:2'],
             'tanggal-lahir' => ['required', 'min:2'],
-            'ktp' => ['required', 'image', 'max:2048', 'mimes:jpg,jpeg,png'],
+            'ktp' => ['required', 'image', 'mimes:jpg,jpeg,png'],
        ]);
        $img_link = $this->saveImage( $request , 1);
        $request->ktp = $img_link;

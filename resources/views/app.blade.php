@@ -48,7 +48,7 @@
                             transition
                             ease-in-out
                             m-0
-                            focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput123"
+                            focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                             aria-describedby="emailHelp123" placeholder="Nama Lengkap" name="nama" value="{{ old('nama') }}">
                         </div>
                         <div class="form-group mb-6">
@@ -69,7 +69,7 @@
                             transition
                             ease-in-out
                             m-0
-                            focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput124"
+                            focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                             aria-describedby="emailHelp124" placeholder="NIK" name="nik" value="{{ old('nik') }}" >
                         </div>
                     </div>
@@ -90,7 +90,7 @@
                         transition
                         ease-in-out
                         m-0
-                        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput125"
+                        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" 
                         placeholder="Alamat" name="alamat" value="{{ old('alamat') }}">
                     </div>
                     <div class="form-group mb-6">
@@ -110,7 +110,7 @@
                         transition
                         ease-in-out
                         m-0
-                        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput126"
+                        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                         placeholder="Tempat Lahir" name="tempat-lahir" value="{{ old('tempat-lahir') }}">
                     </div>
                     <div class="form-group mb-6">
